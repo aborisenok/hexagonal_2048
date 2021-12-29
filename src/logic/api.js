@@ -4,7 +4,11 @@ import { SERVER_URLS } from "../common/constants";
 
 const getRequestUrl = (serverUrl, port, radius) => {
   const isLocal = serverUrl === SERVER_URLS.LOCAL.value;
-  return `http://${serverUrl}${isLocal ? `:${port}` : ''}/${radius}`
+  if (isLocal) {
+    return `http://${serverUrl}:${port}}/${radius}`;
+  } else {
+    return `https://${serverUrl}/${radius}`;
+  }
 }
 
 export const getCellsData = (requstData, filledCells) => {
