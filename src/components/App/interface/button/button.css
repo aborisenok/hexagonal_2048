@@ -1,0 +1,15 @@
+.button {
+  background-color: var(--theme_light_blue2);
+  border: 2px solid var(--theme_dark_blue);
+  border-radius: 2px;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}

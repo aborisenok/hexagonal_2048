@@ -1,0 +1,17 @@
+.app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--theme_light_blue);
+}
+
+.app * {
+  color: var(--theme_dark_blue);
+}
+
+.app .app_theme {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

@@ -1,0 +1,42 @@
+.interface_panel {
+  width: 50%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--theme_dark_blue);
+  background-color: var(--theme_light_blue2);
+  border-radius: 5px;
+  padding: 40px 60px;
+}
+
+.interface_panel .interface_panel_title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.interface_panel .interface_panel_label {
+  margin-top: 10px;
+}
+
+.interface_panel .input-range {
+  margin: 40px 0;
+}
+
+.interface_panel .interface_panel_button {
+  cursor: pointer;
+  font-size: 1.1em;
+  height: 40px;
+  border: 1px solid var(--theme_dark_blue);
+  background-color: var(--theme_medium_blue);
+}
+
+.interface_panel .input-range .input-range__label {
+  color: black;
+  font-size: 16px;
+}
+
+.interface_panel .input-range .input-range__label--max,
+.interface_panel .input-range .input-range__label--min {
+  display: none;
+}

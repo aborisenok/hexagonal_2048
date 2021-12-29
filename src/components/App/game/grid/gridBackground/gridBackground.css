@@ -1,0 +1,22 @@
+.grid_background {
+  position: absolute;
+}
+
+.grid_background .background_cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: var(--theme_dark_blue);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.grid_background .background_cell::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--theme_medium_blue);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: scale(0.97);
+}

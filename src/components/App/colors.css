@@ -1,0 +1,13 @@
+.app.light_theme {
+  --theme_light_blue: #b0e0e6;
+  --theme_light_blue2: #88bdbc;
+  --theme_medium_blue: #374785;
+  --theme_dark_blue: #17252a;
+}
+
+.app.dark_theme {
+  --theme_light_blue: #1f1f1f;
+  --theme_light_blue2: #b474fe;
+  --theme_medium_blue: #0f0f0f;
+  --theme_dark_blue: #17252a;
+}
