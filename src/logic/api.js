@@ -5,7 +5,7 @@ import { SERVER_URLS } from "../common/constants";
 const getRequestUrl = (serverUrl, port, radius) => {
   const isLocal = serverUrl === SERVER_URLS.LOCAL.value;
   if (isLocal) {
-    return `http://${serverUrl}:${port}}/${radius}`;
+    return `http://${serverUrl}:${port}/${radius}`;
   } else {
     return `https://${serverUrl}/${radius}`;
   }
