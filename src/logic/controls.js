@@ -9,3 +9,7 @@ const onKeyPressed = ({ code }, cb) => {
 export const addKeysControlsListener = (cb) => {
   document.addEventListener("keydown", (event) => onKeyPressed(event, cb));
 }
+
+export const addResizeListener = (cb) => {
+  window.addEventListener("resize", cb);
+}

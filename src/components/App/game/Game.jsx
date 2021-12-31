@@ -14,7 +14,9 @@ import {
   isGameOver
 } from "../../../logic/logic";
 
-import { addKeysControlsListener } from "../../../logic/controls";
+import { 
+  addKeysControlsListener,
+  addResizeListener } from "../../../logic/controls";
 import { GAME_STATUS } from "../../../common/constants";
 
 import "./game.css";
@@ -83,9 +85,14 @@ const Game = (props) => {
     }
   };
 
+  const recalculateGrigSize = () => {
+    setSize(getGridSize(props.radius))
+  }
+
   useEffect(() => {
     getData([]);
     addKeysControlsListener(makeCellsMove);
+    addResizeListener(recalculateGrigSize);
     // eslint-disable-next-line
   }, []);
 
