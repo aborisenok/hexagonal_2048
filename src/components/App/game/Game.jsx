@@ -25,10 +25,9 @@ const Game = (props) => {
   const [cells, setCells] = useState(generateCells(props.radius, true));
   const [gameStatus, setGameStatus] = useState(GAME_STATUS.PLAYING);
   const [canMove, _setCanMove] = useState(false);
+  const [size, setSize] = useState(getGridSize(props.radius));
 
-  const canMoveRef = useRef(canMove)
-
-  const { width, height } = getGridSize(props.radius);
+  const canMoveRef = useRef(canMove);
 
   const requestData = {
     serverUrl: props.serverUrl,
@@ -103,7 +102,7 @@ const Game = (props) => {
   return (
     <div className="game">
       <Button layout='game_back_button' onClick={props.backToSettings}>Back</Button>
-      <Grid width={width} height={height} radius={props.radius} cells={cells} />
+      <Grid width={size.width} height={size.height} radius={props.radius} cells={cells} />
       <div className="game_status">Game Status: <span data-status={gameStatus.key}>{gameStatus.text}</span></div>
       <Button hidden={gameStatus.key !== GAME_STATUS.GAME_OVER.key} onClick={props.restartGame}>Play Again</Button>
     </div>
